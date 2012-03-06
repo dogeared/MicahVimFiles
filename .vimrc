@@ -5,15 +5,23 @@ syntax on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Vundle bundle manager
 Bundle 'gmarik/vundle'
+" EasyMotion
+Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
+" Buffer explorer
 Bundle 'bufexplorer.zip'
+" Most recently used buffer
 Bundle 'bufmru.vim'
+" After Command-T installs, make sure you run:
+"   cd ~/.vim/bundle/Command-T/ruby/command-t/
+"   ruby extconf.rb
+"   make
 Bundle 'https://github.com/wincent/Command-T.git'
+" Javascript text hilighting
 Bundle 'https://github.com/pangloss/vim-javascript.git'
+" Change surrounding characters
 Bundle 'https://github.com/vim-scripts/surround.vim.git'
-
-" Autoclose parens etc.
-" Bundle 'https://github.com/Townk/vim-autoclose.git'
 " Text alignment
 Bundle 'https://github.com/godlygeek/tabular.git'
 " Code snipets
