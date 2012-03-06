@@ -7,33 +7,38 @@ call vundle#rc()
 
 " Vundle bundle manager
 Bundle 'gmarik/vundle'
+" After Command-T installs, make sure you run:
+"   cd ~/.vim/"Bundle/Command-T/ruby/command-t/
+"   ruby extconf.rb
+"   make
+Bundle 'Command-T'
 " EasyMotion
-Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
+Bundle 'EasyMotion'
 " Buffer explorer
 Bundle 'bufexplorer.zip'
 " Most recently used buffer
 Bundle 'bufmru.vim'
-" After Command-T installs, make sure you run:
-"   cd ~/.vim/bundle/Command-T/ruby/command-t/
-"   ruby extconf.rb
-"   make
-Bundle 'https://github.com/wincent/Command-T.git'
-" Javascript text hilighting
-Bundle 'https://github.com/pangloss/vim-javascript.git'
 " Change surrounding characters
-Bundle 'https://github.com/vim-scripts/surround.vim.git'
+Bundle 'surround.vim'
 " Text alignment
-Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'Tabular'
 " Code snipets
-Bundle 'https://github.com/malkomalko/snipmate.vim.git'
+Bundle 'snipMate'
 " Fast code commenting
-Bundle 'https://github.com/scrooloose/nerdcommenter.git'
+Bundle 'The-NERD-Commenter'
 " Project folder
-Bundle 'https://github.com/scrooloose/nerdtree.git'
-" Cucumber
-Bundle 'https://github.com/tpope/vim-cucumber.git'
+Bundle 'The-NERD-tree'
 " Stylus
-Bundle 'https://github.com/wavded/vim-stylus.git'
+Bundle 'vim-stylus'
+
+" -------- Syntax Coloring and indents -------
+
+" Javascript text hilighting
+Bundle 'pangloss/vim-javascript.git'
+" Cucumber
+Bundle 'cucumber.zip'
+" Clojure
+Bundle 'VimClojure'
 
 set ar
 set expandtab
