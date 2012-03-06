@@ -7,6 +7,7 @@ call vundle#rc()
 
 " Vundle bundle manager
 Bundle 'gmarik/vundle'
+
 " After Command-T installs, make sure you run:
 "   cd ~/.vim/"Bundle/Command-T/ruby/command-t/
 "   ruby extconf.rb
