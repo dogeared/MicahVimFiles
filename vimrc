@@ -51,12 +51,13 @@ set noswapfile
 set nu
 set shiftwidth=2
 set tabstop=2
-set wildignore+=.git,.svn,**/node_modules/*,DS_Store,*.log,*.sock
+set wildignore+=.git,.svn,DS_Store,*.log,*.sock
 set wildignore+=*.png,*.gif,*.jpg,*.jpeg,*.class,nohup.out,*.swp
 set wildignore+=*.tmproj,*.pid,**/tmp/*
 set wildmenu
 set wildmode=list:longest,full
 set wrap
+set foldmethod=indent
 
 " functions
 
@@ -99,6 +100,8 @@ command! -nargs=0 RunTestFile call s:RunTestFile()
 
 let mapleader = ","
 let maplocalleader = ","
+
+map <Leader>c :let @/ = ""<CR>
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.vimrc<cr>
