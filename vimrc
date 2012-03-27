@@ -136,34 +136,9 @@ let g:vimclojure#HighlightBuiltins=1
 au BufRead,BufNewFile *.clj set filetype=clojure
 
 " Gui Setup *******************************************************************
-if has("gui_running")
-  if has("gui_gnome")
-    set term=gnome-256color
-    set guifont=Inconsolata\ 16
-    set guioptions-=T
-    set guioptions-=m
-    set guioptions+=c
-    set guioptions-=rL
-    set lines=100
-    set columns=185
-  else
-    set guitablabel=%M%t
-    set lines=100
-    set columns=185
-  endif
-
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=Inconsolata:h22
-    set fuoptions=maxvert,maxhorz
-    set guioptions-=T
-    set guioptions-=m
-    set guioptions+=c
-    set guioptions-=rL
-    " set colorcolumn=81
-    colorscheme jellybeans 
-  endif
-endif
-
+set t_Co=256
+colorscheme jellybeans 
+set guifont=Inconsolata:h22
 
 " NERDTree ********************************************************************
 
