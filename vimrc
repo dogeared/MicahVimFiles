@@ -57,7 +57,6 @@ set wildignore+=*.tmproj,*.pid,**/tmp/*
 set wildmenu
 set wildmode=list:longest,full
 set wrap
-set foldmethod=indent
 
 " functions
 
@@ -97,6 +96,18 @@ function! s:RunTestFile()
   endif
 endfunction
 command! -nargs=0 RunTestFile call s:RunTestFile()
+
+function! JavaScriptFold()
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
+au FileType javascript call JavaScriptFold()
 
 let mapleader = ","
 let maplocalleader = ","
